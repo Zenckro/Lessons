@@ -1,6 +1,5 @@
 function escopo () {
     const form = document.querySelector('.form');
-    //const pessoas = []
 
     function EventoForm (evento) {
         evento.preventDefault();
@@ -15,6 +14,8 @@ function escopo () {
         resultado.innerHTML = `<p>Nome: ${nome.value} ${sobrenome.value}</p>`;
         resultado.innerHTML += `<p>Peso: ${peso.value}</p>`;
         resultado.innerHTML += `<p>Altura: ${altura.value}</p>`;
+
+        return (nome, sobrenome, peso, altura)
     }
     form.addEventListener('submit',EventoForm)
 }
